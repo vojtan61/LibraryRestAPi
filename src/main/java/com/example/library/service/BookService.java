@@ -65,9 +65,7 @@ public class BookService {
 
     public Optional<Book> getBookByYear(Integer year) {
         Optional<Book> bookOptional = Optional.empty();
-        System.out.println(year);
         Book book = bookRepository.findByYear(year);
-        System.out.println(book);
         if (book != null) {
             bookOptional = Optional.of(book);
         }
